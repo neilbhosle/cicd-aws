@@ -53,3 +53,70 @@ Before you begin, ensure you have the following:
            }
        ]
    }
+
+---
+
+## 2. Set Up AWS CodePipeline
+Go to the CodePipeline Console in AWS.
+
+Create a new pipeline (e.g., MyStaticWebsitePipeline).
+
+Configure the Source Stage:
+
+Connect to your GitHub repository.
+
+Select the branch (e.g., main).
+
+Skip the Build Stage (not needed for static websites).
+
+Configure the Deploy Stage:
+
+Choose Amazon S3 as the deployment provider.
+
+Select your S3 bucket.
+
+Enable Extract file before deploy.
+
+Review and create the pipeline.
+
+## 3. Test the Pipeline
+Make a change to your index.html file in the GitHub repository.
+
+Push the changes to the repository.
+
+The pipeline will automatically trigger and deploy the changes to the S3 bucket.
+
+Visit the S3 bucket website endpoint to see the updated website:
+
+```json
+http://aws-cicd-static-website.s3-website-us-east-1.amazonaws.com
+```
+---
+
+📂 Project Structure
+```json
+my-static-website/
+├── index.html          # Main HTML file
+├── style.css           # CSS file for styling
+├── script.js           # JavaScript file (optional)
+└── README.md           # Project documentation
+```
+---
+💡 Customization
+Add a Custom Domain: Use Amazon Route 53 to map a custom domain to your S3 bucket.
+
+Enable HTTPS: Use Amazon CloudFront to serve your website over HTTPS.
+
+Add More Features: Extend the website with additional pages, a blog, or a contact form.
+
+---
+
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+🙏 Acknowledgments
+AWS Documentation
+
+GitHub Actions Documentation
