@@ -1,0 +1,147 @@
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --background-color: #f4f4f9;
+    --card-bg: #2c3e50;
+    --card-text: #fff;
+    --card-border: rgba(255, 255, 255, 0.1);
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+}
+
+/* Reset and Basic Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 30px;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    background: var(--card-bg);
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-in-out;
+    color: var(--card-text);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.step h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.step p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Emoji Styles */
+.emoji {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .step h3 {
+        font-size: 1.3rem;
+    }
+
+    .step p {
+        font-size: 0.9rem;
+    }
+}

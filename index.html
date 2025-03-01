@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Static Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CI/CD Pipeline Process</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple static website deployed using AWS CodePipeline.</p>
+    <div class="container">
+        <h1>🚀 My CI/CD Pipeline Process</h1>
+        <p>This page outlines the steps I followed to set up a CI/CD pipeline using AWS CodePipeline and S3.</p>
+
+        <div class="steps">
+            <!-- Step 1 -->
+            <div class="step">
+                <h3><span class="emoji">📦</span> Step 1: Create an S3 Bucket</h3>
+                <p>I created an S3 bucket named <code>aws-cicd-static-website</code> and enabled static website hosting.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <h3><span class="emoji">🐙</span> Step 2: Set Up GitHub Repository</h3>
+                <p>I created a GitHub repository and added my static website files (<code>index.html</code>, <code>style.css</code>).</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <h3><span class="emoji">⚙️</span> Step 3: Create AWS CodePipeline</h3>
+                <p>I set up a CI/CD pipeline using AWS CodePipeline. The pipeline pulls code from GitHub and deploys it to the S3 bucket.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <h3><span class="emoji">🧪</span> Step 4: Test the Pipeline</h3>
+                <p>I pushed changes to the GitHub repository and verified that the pipeline automatically deployed the updates to the S3 bucket.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step">
+                <h3><span class="emoji">🌐</span> Step 5: View the Website</h3>
+                <p>I accessed the website using the S3 bucket endpoint: <code>http://aws-cicd-static-website.s3-website-us-east-1.amazonaws.com/</code>.</p>
+            </div>
+        </div>
+
+        <h2>🚀 Next Steps</h2>
+        <p>In the future, I plan to:</p>
+        <ul>
+            <li><span class="emoji">🔗</span> Add a custom domain using Route 53.</li>
+            <li><span class="emoji">🔒</span> Enable HTTPS using CloudFront.</li>
+            <li><span class="emoji">📝</span> Add more features to the website, like a blog or contact form.</li>
+        </ul>
+    </div>
 </body>
 </html>
