@@ -59,25 +59,25 @@ Before you begin, ensure you have the following:
 ## 2. Set Up AWS CodePipeline
 Go to the CodePipeline Console in AWS.
 
-Create a new pipeline (e.g., MyStaticWebsitePipeline).
+- Create a new pipeline (e.g., MyStaticWebsitePipeline).
 
-Configure the Source Stage:
+- Configure the Source Stage:
 
-Connect to your GitHub repository.
+- Connect to your GitHub repository.
 
-Select the branch (e.g., main).
+- Select the branch (e.g., main).
 
-Skip the Build Stage (not needed for static websites).
+- Skip the Build Stage (not needed for static websites).
 
-Configure the Deploy Stage:
+- Configure the Deploy Stage:
 
-Choose Amazon S3 as the deployment provider.
+- Choose Amazon S3 as the deployment provider.
 
-Select your S3 bucket.
+- Select your S3 bucket.
 
-Enable Extract file before deploy.
+- Enable Extract file before deploy.
 
-Review and create the pipeline.
+- Review and create the pipeline.
 
 ## 3. Test the Pipeline
 Make a change to your index.html file in the GitHub repository.
@@ -117,6 +117,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 
 🙏 Acknowledgments
+
 AWS Documentation
 
 GitHub Actions Documentation
